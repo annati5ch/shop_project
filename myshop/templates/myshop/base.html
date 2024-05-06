@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />	
+<head>
+
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>Магазин детских товаров</title>
+	
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="logo">
+			<h1 align=center><span id="welcome_to_the_online_shop">Магазин<br>"Детский Дом"</span></h1>
+		</div>	
+		
+		<div class="header-items">
+			
+			<div class="search">
+				<input type="text" class="search-box" placeholder="Название товара, бренда">
+				<button class="search-btn">Поиск</button>
+			</div>
+			
+			<div class="multi-button">
+				
+				<button><a href="catalog"> Каталог </a></button>
+				<button><a href="contact"> Контакты </a></button>
+				<button><a href="user"> Профиль </a></button>
+				<button><a href="cart"> Корзина </a></button>
+			
+			</div>
+			
+		</div>
+	</header>
+   <footer>
+
+   </footer>
+   
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+{% extends "C:\works\python\shop\myshop\templates\myshop/base.html" %}
+{% load static %}
+{% block title %}
+    {% if category %}{{ category.name }}{% else %}Категории товаров{% endif %}
+{% endblock %}
+
+{% block content %}
+
+<main>
+    <div id="main" class="product-list">
+        <h1>{% if category %}{{ category.name }}{% else %}Товары{% endif %}</h1>
+        {% for product in products %}
+            <div class="item">
+                <a href="{{ product.get_absolute_url }}">
+                    <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
+                </a>
+                <a href="{{ product.get_absolute_url }}">{{ product.name }}</a><br>
+                {{ product.price }}руб.
+            </div>
+        {% endfor %}
+    </div>
+</main>
+	
+{% endblock %}
