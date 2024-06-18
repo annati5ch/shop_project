@@ -1,74 +1,79 @@
-
-.header {
-  height: 150px;
-  background: #B0E0E6;
+body {
+	width: 100%;
+	margin: 0;
+	padding: 0;
 }
 
-.logo {
-  height: 50px;
-  position: absolute;
-  left: 100 px;
-  top: 20 px;
-  font-family: Comic Sans MS;
-  font-size: 15 em;
-  color: #008080;
+header {
+	padding: 15px;
+	margin: 0 auto;
+	height: 150px;
+	background: #B0E0E6;
+	display: grid;
+	align-items: center;
+	justify-items: stretch;
+	justify-content: space-between;
+	grid-template-columns: 5fr 3fr;
+ }
+
+.buttons {
+	width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+	gap: 40px 0;
 }
 
-.header-items {
-	top: 50px;
-	position: fixed;
-	font-family: Sans Comic MS;
-	font-size: 10 em;
-}
-
-.search{
-	position: fixed;
-	right: 75px;
-    width: 500px;
-    display: flex;
+.search {
+	align-items: center;
+	width: 600px;
+	display: flex;
 }
 
 .search-box{
 	width: 80%;
-    height: 20px;
-    padding: 10px;
+	height: 40px;
+	padding: 0px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border: 1px solid #008080;
-    text-transform: capitalize;
     background: none;
     color: #008080;
     outline: none;
+	margin: 0;
+	font-size: 15px;
 }
 
 .search-btn{
-    width: 20%;
-    height: 42px;
-    padding: 10px 20px;
+	width: 20%;
+	height: 42px;
     border: none;
     outline: none;
     cursor: pointer;
     background: #008080;
     color: #fff;
-    text-transform: capitalize;
     font-size: 15px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+	margin: 0px;
+	padding: 0px;
 }
 
-.search-box::placeholder{
-    color: #5F9EA0;
+.multi-button{
+	width: 600px;
+	display: grid;
+	align-items: center;
+	grid-template-columns: repeat(4, 1fr);
 }
 
 button{
-	font-size: 5vmin;
-	padding: .5em 1em;
+	font-size: 16px;
+	height: 35px;
 	background: #fff;
 	color: #4A5568;
-	border: 0 px solid #4682B4;
+	border: 1 px solid #008080;
 	margin: .1em;
-	transition: background .2s ease, color .2s ease, box-shadow .2s ease, transform .2s ease;
-	box-shadow: 0 0 0 #4682B4;
+	transition: background .2s ease color .2s ease, box-shadow .2s ease, transform .2s ease;
+	box-shadow: 0 0 0 #008080;
 	transform: translateY(0);
 }
 
@@ -90,15 +95,26 @@ button:last-of-type{
 }
 
 .multi-button:hover button:hover{
-	background: #4682B4;
-	color: #fff;
-	box-shadow: 0 0 0.8em 0 #4682B4;
+	background: #008080;
+	box-shadow: 0 0 0.8em 0 #008080;
 	transform: translateY(-.2em);
 }
-.multi-button:hover button i{
+.multi-button:hover button a{
 	color: #CBD5E0;
 }
-.multi-button:hover button:hover i{
+.multi-button:hover button:hover a{
 	color: #FED7E2;
 	transform: rotate(-10deg);
 }
+
+.main{
+	padding: 15px;
+	margin: 0 auto;
+	height: 1000px;
+	display: grid;
+	align-items: center;
+	justify-items: stretch;
+	justify-content: space-between;
+	grid-template-rows: 3fr 3fr;
+ }
+	
