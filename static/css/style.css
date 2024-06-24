@@ -1,111 +1,4 @@
-body {
-	width: 100%;
-	margin: 0;
-	padding: 0;
-}
 
-header {
-	padding: 15px;
-	margin: 0 auto;
-	height: 150px;
-	background: #B0E0E6;
-	display: grid;
-	align-items: center;
-	justify-items: stretch;
-	justify-content: space-between;
-	grid-template-columns: 5fr 3fr;
- }
-
-.buttons {
-	width: 100%;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-	gap: 40px 0;
-}
-
-.search {
-	align-items: center;
-	width: 600px;
-	display: flex;
-}
-
-.search-box{
-	width: 80%;
-	height: 40px;
-	padding: 0px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border: 1px solid #008080;
-    background: none;
-    color: #008080;
-    outline: none;
-	margin: 0;
-	font-size: 15px;
-}
-
-.search-btn{
-	width: 20%;
-	height: 42px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background: #008080;
-    color: #fff;
-    font-size: 15px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-	margin: 0px;
-	padding: 0px;
-}
-
-.multi-button{
-	width: 600px;
-	display: grid;
-	align-items: center;
-	grid-template-columns: repeat(4, 1fr);
-}
-
-button{
-	font-size: 16px;
-	height: 35px;
-	background: #fff;
-	color: #4A5568;
-	border: 1 px solid #008080;
-	margin: .1em;
-	transition: background .2s ease color .2s ease, box-shadow .2s ease, transform .2s ease;
-	box-shadow: 0 0 0 #008080;
-	transform: translateY(0);
-}
-
-button a{
-	color: #A0AEC0;
-	margin-right: .3em;
-	transition: all .2s ease-out;
-}
-
-button:first-of-type{
-	border-radius: .5em 0 0 .5em;
-}
-button:last-of-type{
-	border-radius: 0 .5em .5em 0;
-}
-
-.multi-button:hover button{
-	color: #A0AEC0;
-}
-
-.multi-button:hover button:hover{
-	background: #008080;
-	box-shadow: 0 0 0.8em 0 #008080;
-	transform: translateY(-.2em);
-}
-.multi-button:hover button a{
-	color: #CBD5E0;
-}
-.multi-button:hover button:hover a{
-	color: #FED7E2;
-	transform: rotate(-10deg);
-}
 
 .main{
 	padding: 15px;
@@ -115,6 +8,8 @@ button:last-of-type{
 	align-items: center;
 	justify-items: stretch;
 	justify-content: space-between;
-	grid-template-rows: 3fr 3fr;
+	grid-template-rows: 3fr 3fr 3r;
  }
+
+.footer {
 	

@@ -1,20 +1,42 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Category, Product
+from cart.forms import CartAddProductForm
+from django.http import Http404
 #from django.http import HttpResponse
 
+def product_detail(request, product_id, product_slug):
+    product = get_object_or_404(Product,
+                                id=product_id,
+                                slug=product_slug,
+                                available=True)
+    cart_product_form = CartAddProductForm()
+    return render(request, '/product/detail.html', {'product': product,
+                                                        'cart_product_form': cart_product_form})
 
-def product_list(request, category_slug=None):
-    category = None
-    categories = Category.objects.all()
-    products = Product.objects.filter(available=True)
-    if category_slug:
-        category = get_object_or_404(Category, slug=category_slug)
-        products = products.filter(category=category)
-    return render(request, 'myshop/product/list.html',
-                  {'category': category,
-                   'categories': categories,
-                   'products': products})
+def home_page(request):
+    photo = Product.image
+    name = Product.name
+    old_price = Product.orig_price
+    discount = Product.discount
+    sell_price = Product.sell_price
 
-def product_detail(request, id, slug):
-    product = get_object_or_404(Product, id=id, slug=slug, available=True)
-    return render(request, 'myshop/product/detail.html')
+    return render(request, 'home_page.html',
+                  {'photo': photo,
+                   'old_price': old_price,
+                   'name': name,
+                   'discount': discount,
+                   'sell_price': sell_price})
+
+def product_list(request):
+    queryset = Product.objects.all()
+    context = {'products': queryset}
+    return render(request, "product/product_list.html", context)
+
+def product_list_categories(request):
+    object_list = Category.objects.values_list('name', flat=True).distinct()
+    context = {'object_list': object_list}
+    return render(request,"product/product_list.html", context)
+
+
+
+
